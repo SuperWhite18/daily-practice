@@ -4,7 +4,7 @@ int main()
 {
 	int i, j, k = 0;
 	for (i = 100; i <= 200; i++)
-		for (j = 2; j <= sqrt(i); j++)
+		for (j = 2; j <= sqrt(i); j++)//sqrt 开平方根
 			if (i % j == 0)
 				break;
 			else if (j > sqrt(i) - 1)
