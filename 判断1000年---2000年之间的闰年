@@ -9,7 +9,7 @@ int main()
 		{
 			printf("%d ", year);
 		}
-		if (year % 400 == 0)//每400年闰一次
+		if (year % 400 == 0)//每400年一闰
 		{
 			printf("%d ", year);
 		}
