@@ -10,7 +10,7 @@ list initlist(list *l)
 	int i=0;
 	char a;
 	list *head,*p;
-	head=(list*)malloc(sizeof(list));
+	head=(list*)malloc(sizeof(list));//申请空间
 	head=l;
 	printf("请输入字母:\n");
 	for(i=0;i<=10;i++)
