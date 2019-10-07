@@ -1,0 +1,30 @@
+#include<stdio.h>
+void sort(int L[], int len)//
+{
+	int* left = L;//取首元素地址，与int *left = &L[0]等价
+	int* right = L + len - 1;//取末尾元素地址，与int *right=&L[len-1]等价
+	while (left < right)
+	{
+		while (left < right && (*left) % 2 != 0)//寻找开头第一个偶数
+			left++;
+		while (left < right && (*right) % 2 != 1)//寻找末尾第一个奇数
+			right--;
+		//交换两个数
+		if (left >= right)//判断是否结束
+			return;
+		int t = *left;
+		*left = *right;
+		*right = t;
+		left++;
+		right--;
+	}
+}
+int main()
+{
+	int a[] = { 1,2,3,6,5,8,9,7,4,0 };
+	sort(a, 10);
+	for (int i = 0; i < 10; i++)
+		printf("%d ", a[i]);
+	return 0;
+
+}
