@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	char c1,c2,c3;
+	printf("请输入一个字符:\n");
+	scanf("%c",&c1);
+	c2=c1-1;
+	c3=c1+1;
+	printf("前驱字符为%c，后继字符为%c\n",c2,c3);
+	return 0;
+}
+
+输出结果：
+输入c
+前驱：b；后驱：d
