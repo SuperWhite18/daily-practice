@@ -1,0 +1,17 @@
+计算1/1-1/2+1/3-1/4+1/5 ⋯⋯ + 1/99 - 1/100 的值
+
+#include<stdio.h>
+#include<windows.h>
+int main()
+{
+	int i = 1;
+	double sum = 0.0;
+	int flag = 1;
+	for (; i <= 100; i++) {
+		sum = sum + (1.0 * flag) / i;
+		flag = -flag;
+	}
+	printf("%f\n", sum);
+	system("pause");
+	return 0;
+}
