@@ -1,0 +1,37 @@
+#include<stdio.h>
+void main()
+{
+	typedef struct
+	{
+		char elem[99];
+		int top;
+	}huiwen;
+	char b;
+	int c = 1;
+	huiwen s;
+	s.top = -1;
+	b = getchar();
+	while (b != '&')
+	{
+		s.top++;
+		s.elem[s.top] = b;
+		b = getchar();
+	}
+	b = getchar();
+	while (b != '@')
+	{
+		if (b != s.elem[s.top])
+		{
+			c = 0; break;
+		}
+		else
+		{
+			s.top--;
+			b = getchar();
+		}
+	}
+	if (c)
+		printf("是回文序列");
+	else
+		printf("不是回文序列");
+}
