@@ -24,3 +24,4 @@ int main()
 	else
 	printf("不是回文序列"); 
 }
+ 
