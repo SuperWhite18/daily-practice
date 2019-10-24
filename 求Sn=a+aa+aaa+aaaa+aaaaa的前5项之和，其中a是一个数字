@@ -1,0 +1,20 @@
+#include<stdio.h>
+#pragma warning(disable:4996)
+
+int main()
+
+{
+	int i = 0;
+    int a = 0;
+    int sum = 0;
+    int num = 0;
+	printf("请输入一个数字\n");
+	scanf("%d", &num);
+	for (i = 0; i < 5; i++)
+	{
+		a = a * 10 + num;
+		sum = sum + a;
+	}
+	printf("结果为%d", sum);
+	return 0;
+}
