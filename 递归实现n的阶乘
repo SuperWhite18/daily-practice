@@ -1,0 +1,22 @@
+#include <stdio.h>
+#pragma warning (disable:4996)
+int Factorial(int x);
+int main(int argc, char const* argv[])
+{
+	int s;
+	printf("Please Enter number :\n");
+	scanf("%d", &s);
+	Factorial(s);
+	printf("%d! is %d\n", s, Factorial(s));
+	return 0;
+}
+int Factorial(int x)
+{
+
+	if (x == 0)
+	{
+		return 1;
+	}
+	else
+		return x * Factorial(x - 1);
+}
