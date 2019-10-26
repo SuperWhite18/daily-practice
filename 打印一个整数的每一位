@@ -1,0 +1,23 @@
+#include<stdio.h>
+#pragma warning (disable:4996)
+void Print(int n)
+{
+	if (n < 10)
+	{
+		printf("%d ", n);
+	}
+	else
+	{
+		Print(n / 10);
+		printf("%d ", n % 10);
+	}
+}
+int main()
+{
+	int n = 0;
+	printf("Please Enter Number :");
+	scanf("%d", &n);
+	Print(n);
+	system("pause");
+	return 0;
+}
