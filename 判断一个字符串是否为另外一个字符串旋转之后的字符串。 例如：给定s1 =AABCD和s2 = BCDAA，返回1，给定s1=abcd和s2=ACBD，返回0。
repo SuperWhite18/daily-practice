@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+void t2()
+{
+    char s1[100] = "AABCD";
+    char s2[100] = "BCDAA";
+    char s1s1[100] = {0};
+    
+    strcpy(s1s1, s1);
+    strcat(s1s1, s1);
+    
+    if(strstr(s1s1, s2) != NULL)
+    {
+        printf("1\n");
+    }
+    else
+    {
+        printf("0\n");
+    }
+}
+
+int main(int argc, const char * argv[])
+{
+    t2();
+    return 0;
+}
