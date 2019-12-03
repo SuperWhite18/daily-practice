@@ -1,0 +1,30 @@
+//冒泡排序(升序）
+#include <stdio.h>
+int main()
+{
+	int arr[] = { 2,1,3,4,6,5,7,8,9,10 };
+	//外层控制行
+	//外层执行次数-1次
+	for (int i = 0; i < 10 - 1; i++)
+	{
+		//内层控制列
+		//内层执行次数-1-外层执行次数
+		for (int j = 0; j < 10 - 1-i; j++)
+			{
+			//比较两个元素 满足情况进行交换
+			//  通过符号控制排序方式
+				if (arr[j] > arr[j + 1])
+				{
+					int temp = arr[j];
+						arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			printf("%d\n", arr[i]);
+		}
+	
+		return 0;
+}
